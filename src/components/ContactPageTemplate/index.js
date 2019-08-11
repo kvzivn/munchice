@@ -61,7 +61,7 @@ class ContactPageTemplate extends Component {
               data-netlify='true'
               data-netlify-honeypot='bot-field'
               onSubmit={this.handleSubmit}
-              style={{ width: '500px', margin: '0 auto' }}
+              style={{ maxWidth: '500px', margin: '0 auto' }}
             >
               <input type='hidden' name='form-name' value='contact' />
               <div hidden>
