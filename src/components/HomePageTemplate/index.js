@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import Offerings from '../Offerings'
 import Testimonials from '../Testimonials'
 import PropTypes from 'prop-types'
+import logo from '../../assets/img/logo.png'
 
 const HomePageTemplate = ({
   title,
@@ -23,32 +24,8 @@ const HomePageTemplate = ({
         <div className='container'>
           <div className='columns'>
             <div className='column is-10 is-offset-1'>
-              <div className='section'>
-                <h1 className='title'>
-                  {title}
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section className='section section--gradient'>
-      <div className='container'>
-
-        <div className='section'>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='content'>
-                <div>
-                  <h3 className='has-text-weight-semibold is-size-2'>
-                    {heading}
-                  </h3>
-                  <p>{description}</p>
-                </div>
-                <Offerings gridItems={offerings.blurbs} />
-                <h2 className='has-text-weight-semibold is-size-2'>Testimonials</h2>
-                <Testimonials testimonials={testimonials} />
+              <div className='section' style={{ height: '100%', padding: '0' }}>
+                  <img style={{ display: 'block', width: '400px', margin: '0 auto'}} src={logo} alt="yes" />
               </div>
             </div>
           </div>

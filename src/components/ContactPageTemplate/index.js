@@ -45,21 +45,10 @@ class ContactPageTemplate extends Component {
           <meta name='description' content={meta_description} />
         </Helmet>
         <section className='hero is-primary is-bold is-medium'>
-          <div className='hero-body'>
-            <div className='container'>
-              <div className='columns'>
-                <div className='column is-10 is-offset-1'>
-                  <div className='section'>
-                    <h1 className='title'>
-                      {title}
-                    </h1>
-                    <h2 className='subtitle'>
-                      {subtitle}
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className='container'>
+            <h1 className='title' style={{ textAlign: 'center', marginTop: '4rem' }}>
+              Säg till mig hur många
+            </h1>
           </div>
         </section>
         <section className='section'>
@@ -72,6 +61,7 @@ class ContactPageTemplate extends Component {
               data-netlify='true'
               data-netlify-honeypot='bot-field'
               onSubmit={this.handleSubmit}
+              style={{ width: '500px', margin: '0 auto' }}
             >
               <input type='hidden' name='form-name' value='contact' />
               <div hidden>
@@ -81,32 +71,29 @@ class ContactPageTemplate extends Component {
                 </label>
               </div>
               <div className='field'>
-                <label className='label'>Name</label>
+                <label className='label' style={{color: 'white'}}>Namn</label>
                 <div className='control'>
-                  <input className='input' type='text' placeholder='Full Name' name='name' id='name' onChange={this.handleChange} />
+                  <input className='input' type='text' name='name' id='name' onChange={this.handleChange} />
                 </div>
               </div>
 
               <div className='field'>
-                <label className='label'>Email</label>
+                <label className='label' style={{color: 'white'}}>Email</label>
                 <div className='control'>
-                  <input className='input' type='email' placeholder='Email' name='email' id='email' onChange={this.handleChange} />
+                  <input className='input' type='email' name='email' id='email' onChange={this.handleChange} />
                 </div>
               </div>
 
               <div className='field'>
-                <label className='label'>Message</label>
+                <label className='label' style={{color: 'white'}}>Meddelande</label>
                 <div className='control'>
-                  <textarea className='textarea' placeholder='Message' name='message' id='message' rows='6' onChange={this.handleChange} />
+                  <textarea className='textarea' name='message' id='message' rows='6' onChange={this.handleChange} />
                 </div>
               </div>
 
               <div className='field is-grouped is-pulled-right'>
                 <div className='control'>
-                  <button className='button is-text' type='reset'>Cancel</button>
-                </div>
-                <div className='control'>
-                  <button className='button is-primary' type='submit' disabled={(!this.state.name) || (!this.state.email) || (!this.state.message)}>Submit</button>
+                  <button className='button is-primary' type='submit' disabled={(!this.state.name) || (!this.state.email) || (!this.state.message)}>Skicka</button>
                 </div>
               </div>
             </form>

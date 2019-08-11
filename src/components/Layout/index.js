@@ -25,7 +25,6 @@ class Layout extends Component {
         </Helmet>
         <NavBar isActive={this.state.isActive} toggleNavbar={() => this.toggleNavbar()} />
         <Fragment>{this.props.children}</Fragment>
-        <Footer />
       </Fragment>
     )
   }
