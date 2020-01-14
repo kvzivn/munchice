@@ -15,6 +15,8 @@ const AboutPageTemplate = ({title, content, contentComponent}) => {
                 <div className='section'>
                   <h1 className='title'>
                     Vi ska göra till dig pulig
+    
+                    {PageContent}
                   </h1>
                 </div>
               </div>
